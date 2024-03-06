@@ -15,7 +15,5 @@ func _input(evt):
 			
 			#set gravity_scale to 1
 			gravity_scale = 1
-	
-			
 			#apply a force in the kickDr direction * 300
 			apply_force(kickDir * 300)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsv54oatgckjp"]
+[gd_scene load_steps=11 format=3 uid="uid://dsv54oatgckjp"]
 
 [ext_resource type="PackedScene" uid="uid://cqqo8cn5kfdvn" path="res://scenes/fish.tscn" id="1_h0stw"]
 [ext_resource type="Texture2D" uid="uid://4jd07krmvq3h" path="res://gameObjects/FishGameBG.jpg" id="1_u8o5l"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://civb8y0opchff" path="res://sprites/fishTile_078.png" id="5_jkv1j"]
 [ext_resource type="PackedScene" uid="uid://ckg6nx3qqvubl" path="res://gameObjects/gpu_particles_2d.tscn" id="5_y70cj"]
 [ext_resource type="Script" path="res://scripts/UI.gd" id="6_f61hf"]
-[ext_resource type="Script" path="res://scripts/StartGame.gd" id="8_v0cgs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fjj1"]
 size = Vector2(1151, 43)
@@ -94,7 +93,6 @@ offset_top = 655.0
 offset_right = 1140.0
 offset_bottom = 686.0
 text = "Return to Menu?"
-script = ExtResource("8_v0cgs")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 326)

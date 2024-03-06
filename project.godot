@@ -14,7 +14,3 @@ config/name="AngryBirdsBase"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
-
-[rendering]
-
-renderer/rendering_method="mobile"

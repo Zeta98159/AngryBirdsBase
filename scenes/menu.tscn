@@ -1,23 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://dewyn5as4inkm"]
+[gd_scene load_steps=8 format=3 uid="uid://dewyn5as4inkm"]
 
 [ext_resource type="Script" path="res://scripts/StartGame.gd" id="1_5s5pc"]
+[ext_resource type="Texture2D" uid="uid://4jd07krmvq3h" path="res://gameObjects/FishGameBG.jpg" id="1_vkh4s"]
+[ext_resource type="Texture2D" uid="uid://civb8y0opchff" path="res://sprites/fishTile_078.png" id="3_kcvyc"]
+[ext_resource type="PackedScene" uid="uid://ckg6nx3qqvubl" path="res://gameObjects/gpu_particles_2d.tscn" id="4_45fnm"]
+[ext_resource type="Texture2D" uid="uid://b4paxydcifkfp" path="res://sprites/fishTile_077.png" id="5_7tncr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x74q8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_squt5"]
 
 [node name="menu" type="Node2D"]
+
+[node name="FishGameBg" type="Sprite2D" parent="."]
+position = Vector2(575.5, 321.25)
+scale = Vector2(1.53324, 1.52128)
+texture = ExtResource("1_vkh4s")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1162.0
-offset_bottom = 639.0
+offset_left = -2.0
+offset_top = 8.0
+offset_right = 1152.0
+offset_bottom = 647.0
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 453.0
-offset_top = 193.0
-offset_right = 621.0
-offset_bottom = 235.0
-scale = Vector2(2, 2)
-text = "That bird game"
+offset_left = 372.0
+offset_top = 181.0
+offset_right = 463.0
+offset_bottom = 204.0
+scale = Vector2(4.65, 4.65)
+text = "Frisky Fish"
+horizontal_alignment = 1
+uppercase = true
+max_lines_visible = 1
 
 [node name="btnPlay" type="Button" parent="Control"]
 layout_mode = 0
@@ -25,7 +43,30 @@ offset_left = 466.0
 offset_top = 313.0
 offset_right = 688.0
 offset_bottom = 371.0
-text = "Begin"
+text = "Play Game"
+icon_alignment = 1
 script = ExtResource("1_5s5pc")
+
+[node name="FishTile078" type="Sprite2D" parent="."]
+position = Vector2(237, 393)
+scale = Vector2(1.625, 1.40625)
+texture = ExtResource("3_kcvyc")
+
+[node name="GPUParticles2D" parent="FishTile078" instance=ExtResource("4_45fnm")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FishTile078"]
+sprite_frames = SubResource("SpriteFrames_x74q8")
+
+[node name="FishTile077" type="Sprite2D" parent="."]
+position = Vector2(893, 432)
+scale = Vector2(1.375, 1.3125)
+texture = ExtResource("5_7tncr")
+flip_h = true
+
+[node name="GPUParticles2D" parent="FishTile077" instance=ExtResource("4_45fnm")]
+position = Vector2(-20, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FishTile077"]
+sprite_frames = SubResource("SpriteFrames_squt5")
 
 [connection signal="pressed" from="Control/btnPlay" to="Control/btnPlay" method="_on_pressed"]

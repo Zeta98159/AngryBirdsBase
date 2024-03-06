@@ -7,7 +7,6 @@ func score():
 	pass
 
 func add_score():
-	var score = 0
 	var max_score = 10
 	#show new score on page
 	
@@ -19,19 +18,15 @@ func add_score():
 		var newfish = fish_object.instantiate()
 		add_child(newfish)
 	pass
-
-
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
 func _on_button_pressed():
-	pass # Replace with function body.
+	pass
